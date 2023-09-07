@@ -4,7 +4,7 @@ import { MONGODB_URI, DATABASE_NAME } from "./config";
 
 let connectedClient;
 
-export const connectclient = async () => {
+export const connectClient = async () => {
   if (connectedClient) {
     return connectedClient.db(DATABASE_NAME);
   }
