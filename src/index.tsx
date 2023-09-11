@@ -1,7 +1,15 @@
 import { createRoot } from "react-dom/client";
 
+const Header = (props) => {
+  return <div className="header">{props.message}</div>;
+};
+
 const App = () => {
-  return <div>Hello React</div>;
+  return (
+    <div className="container">
+      <Header message="Naming Contests" />
+    </div>
+  );
 };
 
 const container = document.getElementById("app");
