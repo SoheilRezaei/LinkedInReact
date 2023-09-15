@@ -1,30 +1,12 @@
-import { useEffect, useState } from "react";
-
 import Header from "./header";
+import ContestList from "./contest-list";
 
-const App = () => {
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      setCounter(counter + 1);
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalID);
-    };
-  });
-
-  const [counter, setCounter] = useState(0);
-
+const App = ({ initialData }) => {
   return (
     <div className="container">
       <Header message="Naming Contests" />
-      <button
-        onClick={() => {
-          setCounter(counter + 1);
-        }}
-      >
-        {counter}
-      </button>
+
+      <ContestList contests={initialData.contest} />
     </div>
   );
 };
