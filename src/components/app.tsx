@@ -6,7 +6,7 @@ const App = ({ initialData }) => {
     <div className="container">
       <Header message="Naming Contests" />
 
-      <ContestList contests={initialData.contest} />
+      <ContestList contests={initialData.contests} />
     </div>
   );
 };
