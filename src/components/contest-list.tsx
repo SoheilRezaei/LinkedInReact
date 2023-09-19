@@ -6,11 +6,11 @@ import { fetchContests } from "../api-clients";
 const ContestList = ({ initialContests }) => {
   const [contests, setConstests] = useState(initialContests);
 
-  useEffect(() => {
-    fetchContests().then((contests) => {
-      setConstests(contests);
-    });
-  }, []);
+  // useEffect(() => {
+  //   fetchContests().then((contests) => {
+  //     setConstests(contests);
+  //   });
+  // }, []);
   return (
     <div className="contest-list">
       {contests.map((contest) => {
